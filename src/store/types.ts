@@ -17,6 +17,8 @@ export interface AppState {
   eggs: Egg[];
   homeLayout: Record<string, any>;
   collection: Record<string, { firstMetAt: string }>;
+  homeOpen: boolean;
+  collectionOpen: boolean;
   lastSavedAt: string | null;
 }
 
@@ -26,5 +28,7 @@ export const INITIAL_STATE: AppState = {
   eggs: [],
   homeLayout: {},
   collection: {},
+  homeOpen: false,
+  collectionOpen: false,
   lastSavedAt: null
 };

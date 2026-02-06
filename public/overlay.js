@@ -3,7 +3,7 @@
 function init() {
   console.log('📡 Overlay connected');
   
-  // Create minimal debug text
+  // Small debug text (top-left)
   const debugText = document.createElement('div');
   debugText.style.cssText = `
     position: fixed;
@@ -22,12 +22,7 @@ function init() {
   debugText.textContent = '🟢 Overlay Running';
   document.body.appendChild(debugText);
   
-  // Listen for state updates
-  if (window.chilliaAPI?.onStateUpdate) {
-    window.chilliaAPI.onStateUpdate((state: any) => {
-      console.log('📡 State updated:', state);
-    });
-  }
+  console.log('📡 Overlay ready');
 }
 
 document.readyState === 'loading'
